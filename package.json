@@ -1,0 +1,21 @@
+{
+  "name": "asuacmwebsitetest2",
+  "version": "1.0.0",
+  "description": "GoalSetter App https://www.youtube.com/watch?v=-0exw-9YJBo&t=2976s",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "author": "Iggy",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
