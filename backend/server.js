@@ -4,8 +4,15 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 //Envioment variable, if don't work -> go to 5000
 const port = process.env.PORT || 5000;
+const colors = require('colors');
+const connectDB = require('./config/db');
 
 const {errorHandler} = require('./middleware/errorMiddleware');
+//###############################################################################
+//###############################################################################
+//###############################################################################
+
+connectDB();
 
 const app = express();
 
