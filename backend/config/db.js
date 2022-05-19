@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
     try {
         //Idk why this wont accept the PROCESS.ENV.MONGO_URI
-        const conn = await mongoose.connect('mongodb+srv://omgiszbeast:ANGU4YVdhh4p3hQH@testcluster.qspnu.mongodb.net/Mernapp?retryWrites=true&w=majority');
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology:true,
+          });
         console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline);
     } catch (error) {
         console.log(error);
