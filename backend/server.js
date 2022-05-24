@@ -27,6 +27,7 @@ app.use(express.urlencoded({extended: false}));
 //Note: it will gointo the routes folder and go into the goalRoutes.js
 //Here it will find what it needs to return
 app.use('/api/goals', require('./routes/goalRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 //Will overite the default express errorHandler
 app.use(errorHandler)
